@@ -19,3 +19,7 @@ todo: сделать workflow на пуш линков в папки - доба�
 
 ### Разное
 [Git undoing things](https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things)
+
+Python PEP
+
+` pip install flake8 pep8-naming flake8-broken-line flake8-return flake8-isort`
