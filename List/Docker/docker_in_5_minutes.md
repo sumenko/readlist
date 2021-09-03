@@ -6,10 +6,11 @@
 docker build -t <image_name> .
 ```
 
-Запуск
+Запуск (и проброс порта!)
 
 ```
-docker run -it <image_name>
+ls
+
 ```
 
 Останов
@@ -18,13 +19,19 @@ docker run -it <image_name>
 docker container stop <CONTAINER ID>
 ```
 
-Получить список контейнеров
+Получить список контейнеровrun -it
 
 ```
 docker container ls 
 ```
 
 `ls`, `ps`, `list` - алиасы для списка контейнеров
+
+Сделать и запустить образ `fg_back`
+
+```bash
+docker build -t fg_back . && docker run -it fg_back
+```
 
 Показать ID всех контейнеров
 
@@ -61,6 +68,18 @@ docker image | container rm <CONTAINER ID>
 
 ```
 docker image rm $(docker image ls -f dangling=true -q)
+```
+
+Очистка кэша сборки
+
+```
+docker builder prune
+```
+
+Очистка всего
+
+```
+docker system prune
 ```
 
 
